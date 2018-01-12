@@ -129,7 +129,7 @@ def arg_parser():
     elif arg == '-q' or arg == '--quiet':
       PRINT_PIXIE = False
       PRINT_REAVER = False
-    elif arg == '-p' or arg == '--use-pixie':
+    elif arg == '-z' or arg == '--use-pixie':
       USE_PIXIEWPS = True
     elif arg == '-a' or arg == '--airodump-time':
       try:
@@ -884,7 +884,7 @@ class Attack():
     """
     
     print INFO + "Fetching information from %s using reaver..." %essid
-    output = engine.run(cmd=['reaver','-i',c.IFACE_MON,'-b',bssid,'-vvv','-P','-l', '1','-c',channel], timeout = REAVER_TIME)
+    output = engine.run(cmd=['reaver','-i',c.IFACE_MON,'-b',bssid,'-vvv','-K','-l', '1','-c',channel], timeout = REAVER_TIME)
     data = engine.parse_reaver(output)
     if data == 'noutput':
       print
