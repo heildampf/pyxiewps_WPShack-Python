@@ -423,8 +423,8 @@ class Engine():
       if version == '1.5.2':
 	self.REAVER = True
       else:
-	print ALERT + "You need other version of reaver."
-	self.REAVER = False
+	print ALERT + "You have an other version of reaver."
+	self.REAVER = True
     elif not check_again:
       print ALERT + 'reaver is not installed'
       self.REAVER = False
