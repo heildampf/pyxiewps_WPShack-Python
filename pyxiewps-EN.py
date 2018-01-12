@@ -106,10 +106,10 @@ def arg_parser():
 	MAX_APS = 1
       elif mode == 'STATIC':
 	USE_PIXIEWPS = True
-	AIRODUMP_TIME = 5
-	REAVER_TIME = 10
+	AIRODUMP_TIME = 10
+	REAVER_TIME = 60
 	GET_PASSWORD = True
-	PROMPT_APS = True
+	FOREVER = True
 	OVERRIDE = False
       else:
 	print ALERT + "Unknown mode %s." %mode
